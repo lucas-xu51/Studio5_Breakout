@@ -4,6 +4,7 @@ public class ButtonHooks : MonoBehaviour
 {
     public void LoadNextScene()
     {
+        Debug.Log("here");
         SceneHandler.Instance.LoadNextScene();
     }
 
