@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class CameraShake : MonoBehaviour
@@ -8,8 +8,23 @@ public class CameraShake : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+        // 确保单例模式不会重复
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
         originalPosition = transform.position;
+    }
+
+    // **外部调用的简化方法**
+    public void ShakeCamera(float magnitude)
+    {
+        StartCoroutine(Shake(0.2f, magnitude)); // 震动 0.2 秒
     }
 
     public IEnumerator Shake(float duration, float magnitude)

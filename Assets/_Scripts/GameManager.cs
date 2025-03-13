@@ -32,6 +32,13 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         // fire audio here
         // implement particle effect here
         // add camera shake here
+
+        if (CameraShake.Instance != null)
+        {
+            Debug.Log("出发震动");
+            CameraShake.Instance.ShakeCamera(0.2f);  // 震动强度
+        }
+
         currentBrickCount--;
         Debug.Log($"Destroyed Brick at {position}, {currentBrickCount}/{totalBrickCount} remaining");
         if(currentBrickCount == 0) SceneHandler.Instance.LoadNextScene();
