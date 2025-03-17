@@ -9,9 +9,28 @@ public class Ball : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform ballAnchor;
     [SerializeField] private Rigidbody rb;
+    // tail particle
+    //[SerializeField] private ParticleSystem ballTail;
 
     private bool isBallActive;
+    //position and velocity of ball
+    //private Vector3 previousPosition;
+    //private Vector3 currentVelocity;
+    //private ParticleSystem.EmissionModule emissionModule;
 
+    //public void Start()
+    //{
+    //    previousPosition = transform.position;
+    //    emissionModule = ballTail.emission;
+        //tail is not shown if ball not lunch
+    //    emissionModule.enabled = false;
+    //}
+    //public void Update()
+    //{
+    //    currentVelocity = (transform.position - previousPosition) / Time.deltaTime;
+    //    previousPosition = transform.position;
+        //UpdateTrailDirection();
+    //}
     private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Paddle"))
@@ -23,7 +42,7 @@ public class Ball : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
             rb.AddForce(directionToFire * returnSpeed, ForceMode.Impulse);
             //add code to apply sound when ball hit paddle
-            AudioManager.instance.playBump();
+            //AudioManager.instance.playBump();
         }
         //add code to detacted hit the walls and play sound
         if (other.gameObject.CompareTag("Environment"))
@@ -42,6 +61,8 @@ public class Ball : MonoBehaviour
         transform.localPosition = Vector3.zero;
         transform.rotation = Quaternion.identity;
         isBallActive = false;
+        //tail is not shown if ball not lunch
+        //emissionModule.enabled = false;
     }
 
     public void FireBall()
@@ -52,5 +73,17 @@ public class Ball : MonoBehaviour
         rb.AddForce(transform.forward * ballLaunchSpeed, ForceMode.Impulse);
         rb.interpolation = RigidbodyInterpolation.Interpolate;
         isBallActive = true;
+        //show tail
+        //emissionModule.enabled = true;
     }
+    //this method for update the direction of tail
+    //private void UpdateTrailDirection()
+    //{
+    //    Vector3 moveDirection = currentVelocity.normalized;
+    //    ballTail.transform.rotation = Quaternion.Slerp(
+    //       ballTail.transform.rotation,
+    //        Quaternion.LookRotation(-moveDirection),
+    //        Time.deltaTime * 10f
+    //        );
+    //}
 }
