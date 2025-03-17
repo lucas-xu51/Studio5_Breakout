@@ -22,6 +22,13 @@ public class Ball : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             rb.AddForce(directionToFire * returnSpeed, ForceMode.Impulse);
+            //add code to apply sound when ball hit paddle
+            AudioManager.instance.playBump();
+        }
+        //add code to detacted hit the walls and play sound
+        if (other.gameObject.CompareTag("Environment"))
+        {
+            AudioManager.instance.playBump();
         }
     }
 
