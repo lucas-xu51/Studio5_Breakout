@@ -3,7 +3,12 @@ using UnityEngine;
 
 public class Brick : MonoBehaviour
 {
+    //this for apply particle effect
+    [SerializeField] private ParticleSystem destoryParticle;
+
     private Coroutine destroyRoutine = null;
+
+    private ParticleSystem destoryParticleInstance;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -16,6 +21,15 @@ public class Brick : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f); // two physics frames to ensure proper collision
         GameManager.Instance.OnBrickDestroyed(transform.position);
+
+        //span particle effects
+        SpanDestoryParticle();
+
         Destroy(gameObject);
+    }
+
+    private void SpanDestoryParticle()
+    { 
+        destoryParticleInstance = Instantiate(destoryParticle, transform.position,Quaternion.identity);
     }
 }
