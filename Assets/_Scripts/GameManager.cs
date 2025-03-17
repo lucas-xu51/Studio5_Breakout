@@ -6,7 +6,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     [SerializeField] private int maxLives = 3;
     [SerializeField] private Ball ball;
     [SerializeField] private Transform bricksContainer;
-    [SerializeField] private AudioSource audioSource;       // 用于播放音效的 AudioSource 组件
+    //[SerializeField] private AudioSource audioSource;       // 用于播放音效的 AudioSource 组件
 
     private int currentBrickCount;
     private int totalBrickCount;
@@ -41,14 +41,16 @@ public class GameManager : SingletonMonoBehavior<GameManager>
             CameraShake.Instance.ShakeCamera(0.2f);  // 震动强度
         }
 
-        if (audioSource != null)
-        {
-            audioSource.Play();  // 使用 PlayOneShot 来播放音效
-        }
-        else
-        {
-            Debug.LogWarning("AudioSource 组件或音效未设置！");
-        }
+        //if (audioSource != null)
+        //{
+        //    audioSource.Play();  // 使用 PlayOneShot 来播放音效
+        //}
+        //else
+        //{
+        //    Debug.LogWarning("AudioSource 组件或音效未设置！");
+        //}
+
+        AudioManager.instance.playBump();
 
         currentBrickCount--;
         Debug.Log($"Destroyed Brick at {position}, {currentBrickCount}/{totalBrickCount} remaining");
