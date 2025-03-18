@@ -56,13 +56,6 @@ In this Breakout game, I implemented a complete lives system and game over logic
 - 🔄 Game over panel provides restart and quit game options
 - 🖱️ Mouse cursor is unlocked so players can interact with UI elements
 
-### Scene Transition Logic 🚪
-
-- 🗺️ Game flow is determined based on current scene name
-- 🏆 Completing Level 1 automatically loads Level 2
-- 🎉 Completing Level 2 shows the game victory screen
-- 🧭 Provides clear game progression and objectives
-
 ## Visual Results 📸
 
 1. **Heart Lives Display** ❤️❤️❤️: Three red heart icons in the upper left corner visually represent remaining player lives.
