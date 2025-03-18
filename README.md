@@ -20,6 +20,10 @@ This project realizes some new features on the basis of a simple repeat of the c
 - **Camera Shake**: The camera vibrates upon impact.
 - **Sound Effect**: A sound plays to enhance feedback.
 
+## particle system & enhanced Audio System (Jinxi Hu)
+- Use the particle system of unity to implement the effect of destory the brick and ball
+- User unity audio system to implement the sound effect of ball hit wall, hit panddle, destory bricks and ball been break
+
 
 # Hearts Lives System and Game Over Logic Implementation ❤️
 
