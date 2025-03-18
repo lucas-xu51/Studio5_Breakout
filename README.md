@@ -1,11 +1,18 @@
-### **Project Tools**
+# **Break out** - Group 27
 
-This project is implemented by Unity and Visual Studio Code, and is versioned by Github.
+## Project Description 🎮
+This project extends the classic arcade game **Breakout** with enhanced features and modern gameplay elements. Building upon the timeless brick-breaking mechanics, we've implemented additional functionality including:
 
+- ❤️ **Life system visualization** with animated hearts
+- 🖥️ **Engaging UI elements** for game over and winning states
+- 📱 **Responsive controls** for smooth gameplay
+- 📊 **Score tracking** system
+- 📷 **Camera effects** for impact feedback
+- 🎛️ **Game state management** with scene transitions
 
-### **Project Description**
+## Project Tools 🛠️
+This project is built using **Unity engine** and developed with **Visual Studio Code**. Version control is managed through **GitHub**, enabling efficient collaboration and feature tracking throughout the development process.
 
-This project realizes some new features on the basis of a simple repeat of the classic game Breakout. In addition, this project also realizes version control and functional integration through github.
 
 ### **Updated Features**
 
