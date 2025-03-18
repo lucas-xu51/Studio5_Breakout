@@ -14,7 +14,7 @@ This project extends the classic arcade game **Breakout** with enhanced features
 This project is built using **Unity engine** and developed with **Visual Studio Code**. Version control is managed through **GitHub**, enabling efficient collaboration and feature tracking throughout the development process.
 
 
-### **Updated Features**
+## **Updated Features**
 
 ## Hearts Lives System and Game Over Logic Implementation ❤️ - **Iverson (Shuchen) Yuan**
 
