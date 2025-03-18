@@ -59,7 +59,44 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         currentBrickCount--;
         IncreaseScore(); // 更新分数
         Debug.Log($"Destroyed Brick at {position}, {currentBrickCount}/{totalBrickCount} remaining");
+<<<<<<< Updated upstream
         if(currentBrickCount == 0) SceneHandler.Instance.LoadNextScene();
+=======
+
+        // 当所有砖块都被销毁时
+        if (currentBrickCount == 0)
+        {
+            //// 获取当前场景名称
+            //string currentSceneName = SceneManager.GetActiveScene().name;
+
+            //// 根据场景名称执行不同操作
+            //if (currentSceneName == "Level 1")
+            //{
+            //    Debug.Log("Level 1 完成，加载 Level 2");
+            //    SceneManager.LoadScene("Level 2");
+            //}
+            //else if (currentSceneName == "Level 2")
+            //{
+            //    Debug.Log("Level 2 完成，回到主菜单");
+            //    ReturnToMainMenu();
+            //}
+            //else
+            //{
+            //    // 如果场景名称不是Level 1或Level 2，尝试加载下一个场景
+            //    int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            //    if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            //    {
+            //        SceneManager.LoadScene(nextSceneIndex);
+            //    }
+            //    else
+            //    {
+            //        // 如果没有下一个场景，显示游戏胜利
+            //        ShowGameWin();
+            //    }
+            //}
+            SceneHandler.Instance.LoadNextScene();
+        }
+>>>>>>> Stashed changes
     }
 
     public void KillBall()
