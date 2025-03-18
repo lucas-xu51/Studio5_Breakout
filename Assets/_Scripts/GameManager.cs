@@ -45,14 +45,16 @@ public class GameManager : SingletonMonoBehavior<GameManager>
             CameraShake.Instance.ShakeCamera(0.2f);  // 震动强度
         }
 
-        if (audioSource != null)
-        {
-            audioSource.Play();  // 使用 PlayOneShot 来播放音效
-        }
-        else
-        {
-            Debug.LogWarning("AudioSource 组件或音效未设置！");
-        }
+        //if (audioSource != null)
+        //{
+        //    audioSource.Play();  // 使用 PlayOneShot 来播放音效
+        //}
+        //else
+        //{
+        //    Debug.LogWarning("AudioSource 组件或音效未设置！");
+        //}
+
+        AudioManager.instance.playBump();
 
         currentBrickCount--;
         IncreaseScore(); // 更新分数

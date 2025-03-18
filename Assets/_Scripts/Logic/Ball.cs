@@ -9,9 +9,32 @@ public class Ball : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform ballAnchor;
     [SerializeField] private Rigidbody rb;
+    // tail particle
+    //[SerializeField] private ParticleSystem ballTail;
+
+    //ball destory particle
+    [SerializeField] private ParticleSystem destoryParticle;
+    private ParticleSystem destoryParticleInstance;
 
     private bool isBallActive;
+    //position and velocity of ball
+    //private Vector3 previousPosition;
+    //private Vector3 currentVelocity;
+    //private ParticleSystem.EmissionModule emissionModule;
 
+    //public void Start()
+    //{
+    //    previousPosition = transform.position;
+    //    emissionModule = ballTail.emission;
+        //tail is not shown if ball not lunch
+    //    emissionModule.enabled = false;
+    //}
+    //public void Update()
+    //{
+    //    currentVelocity = (transform.position - previousPosition) / Time.deltaTime;
+    //    previousPosition = transform.position;
+        //UpdateTrailDirection();
+    //}
     private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Paddle"))
@@ -22,11 +45,26 @@ public class Ball : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             rb.AddForce(directionToFire * returnSpeed, ForceMode.Impulse);
+            //add code to apply sound when ball hit paddle
+            //AudioManager.instance.playBump();
+        }
+        //add code to detacted hit the walls and play sound
+        if (other.gameObject.CompareTag("Environment")||other.gameObject.CompareTag("Paddle"))
+        {
+            AudioManager.instance.playPin();
         }
     }
 
     public void ResetBall()
     {
+        // show ball destroy particle first
+        if (isBallActive) 
+        { 
+            SpanDestoryParticle();
+            //play aduio when ball destory
+            AudioManager.instance.playBump();
+        }
+
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         rb.isKinematic = true;
@@ -35,6 +73,8 @@ public class Ball : MonoBehaviour
         transform.localPosition = Vector3.zero;
         transform.rotation = Quaternion.identity;
         isBallActive = false;
+        //tail is not shown if ball not lunch
+        //emissionModule.enabled = false;
     }
 
     public void FireBall()
@@ -45,5 +85,25 @@ public class Ball : MonoBehaviour
         rb.AddForce(transform.forward * ballLaunchSpeed, ForceMode.Impulse);
         rb.interpolation = RigidbodyInterpolation.Interpolate;
         isBallActive = true;
+        //audio when fire ball
+        AudioManager.instance.playPin();
+
+        //show tail
+        //emissionModule.enabled = true;
+    }
+    //this method for update the direction of tail
+    //private void UpdateTrailDirection()
+    //{
+    //    Vector3 moveDirection = currentVelocity.normalized;
+    //    ballTail.transform.rotation = Quaternion.Slerp(
+    //       ballTail.transform.rotation,
+    //        Quaternion.LookRotation(-moveDirection),
+    //        Time.deltaTime * 10f
+    //        );
+    //}
+
+    private void SpanDestoryParticle()
+    {
+        destoryParticleInstance = Instantiate(destoryParticle, transform.position, Quaternion.identity);
     }
 }
