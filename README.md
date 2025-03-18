@@ -25,9 +25,9 @@ This project realizes some new features on the basis of a simple repeat of the c
 - User unity audio system to implement the sound effect of ball hit wall, hit panddle, destory bricks and ball been break
 
 
-# Hearts Lives System and Game Over Logic Implementation ❤️
+# Hearts Lives System and Game Over Logic Implementation ❤️ - Iverson (Shuchen) Yuan
 
-## Feature Overview 🎮 - Iverson (Shuchen) Yuan
+## Feature Overview 🎮
 
 In this Breakout game, I implemented a complete lives system and game over logic. Main features include:
 
