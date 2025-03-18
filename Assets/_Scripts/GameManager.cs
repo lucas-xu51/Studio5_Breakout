@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine.Audio;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.SceneManagement;
 
 public class GameManager : SingletonMonoBehavior<GameManager>
 {
@@ -156,4 +157,65 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+
+    // 重新开始游戏
+    public void RestartGame()
+    {
+        // 重置游戏状态
+        Time.timeScale = 1f;
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(false);
+        }
+        if (gameWinPanel != null)
+        {
+            gameWinPanel.SetActive(false);
+        }
+
+        // 使用SceneManager直接重新加载当前场景
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    // 返回主菜单
+    public void ReturnToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    // 退出游戏
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+            // 如果在Unity编辑器中运行，则停止播放模式
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+        // 如果是构建的应用程序，则退出应用
+        Application.Quit();
+#endif
+
+        Debug.Log("退出游戏");
+    }
+
+    // 为按钮点击处理添加这个方法
+    public void HandleButtonClick(string action)
+    {
+        // 临时恢复时间流动以处理点击
+        Time.timeScale = 1f;
+
+        // 根据传入的操作执行不同功能
+        switch (action)
+        {
+            case "restart":
+                RestartGame();
+                break;
+            case "mainmenu":
+                ReturnToMainMenu();
+                break;
+            case "quit":
+                QuitGame();
+                break;
+        }
+    }
+
 }
