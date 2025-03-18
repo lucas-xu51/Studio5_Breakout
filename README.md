@@ -11,7 +11,13 @@ This project realizes some new features on the basis of a simple repeat of the c
 
 - This project realizes a separate scoring system for each level. The player can more intuitively understand their game progress. The animation effect of the score display panel and the corresponding colour matching keep the style of the page unified and harmonious.
 
-- 
+
+
+## Brick Collision Effects (Lucas Xu)
+
+### When the ball touches the brick:
+- 🎥 **Camera Shake**: The camera vibrates upon impact.
+- 🔊 **Sound Effect**: A sound plays to enhance feedback.
 
 ### **Demo Video**
 
@@ -72,55 +78,3 @@ In this Breakout game, I implemented a complete lives system and game over logic
 
 - ⏸️ Successfully implemented game pausing on game over or victory while keeping UI interactive
 - 🧩 Designed intuitive scene transition logic enhancing game flow continuity
-
-
-
-# Camera Shake Implementation on Ball-Brick Collision 📱(Lucas Xu)
-
-## Feature Overview 🎮
-
-In this Breakout game, I implemented a camera shake effect that triggers when the ball collides with bricks. This feature adds:
-
-1. 📳 Responsive camera shake when destroying bricks
-2. 🎯 Enhanced feedback for successful ball hits
-3. 🔄 Configurable shake intensity and duration
-4. 📊 Clean integration with the existing collision system
-
-## Implementation Approach 🛠
-
-### Camera Shake System 📳
-
-- 💥 Camera shake triggers instantly when a ball hits and destroys a brick
-- 🎚 Configurable intensity parameter allows for fine-tuning the effect
-- ⏱ Duration control ensures the shake doesn't interfere with gameplay
-- 🔍 Subtle enough to enhance feedback without disorienting the player
-
-### Integration with Collision System 🎯
-
-- 📡 Ball-brick collision detection seamlessly triggers the camera shake
-- ⚙ Singleton pattern used for the CameraShake component allows for easy access
-- 🧩 System works with any brick type without requiring individual configuration
-
-## Visual Results 📸
-
-1. **Impact Emphasis** 💥: The screen subtly shakes when the ball destroys a brick, emphasizing the impact.
-2. **Graduated Feedback** 📊: Players receive immediate visual feedback when successfully hitting targets.
-3. **Enhanced Game Feel** 🎮: The shake effect adds weight and significance to brick destruction.
-
-## Technical Challenges and Solutions 💡
-
-### Camera Movement Control 🎥
-
-- ⚙ Implemented a mathematical approach using perlin noise for natural-feeling camera movement
-- 🔧 Created a coroutine-based system to control shake duration and falloff
-- 🛠 Ensured shake effect doesn't interfere with the main camera's tracking functions
-
-### Performance Optimization ⚡
-
-- 📉 Optimized shake calculations to maintain consistent frame rates
-- 🔄 Used efficient shake algorithms that scale well with multiple simultaneous collisions
-- 💻 Minimized garbage collection concerns by properly managing shake coroutines
-
-## Summary 🎯
-
-The camera shake feature significantly
