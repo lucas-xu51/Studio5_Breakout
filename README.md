@@ -9,22 +9,6 @@ This project realizes some new features on the basis of a simple repeat of the c
 
 ### **Updated Features**
 
-## Scoring System (Ming Xu)
-- This project realizes a separate scoring system for each level. The player can more intuitively understand their game progress. The animation effect of the score display panel and the corresponding colour matching keep the style of the page unified and harmonious.
-
-
-
-## Brick Collision Effects (Lucas Xu)
-
-### When the ball touches the brick:
-- **Camera Shake**: The camera vibrates upon impact.
-- **Sound Effect**: A sound plays to enhance feedback.
-
-## Particle System & Enhanced Audio System (Jinxi Hu)
-- Use the particle system of unity to implement the effect of destory the brick and ball
-- User unity audio system to implement the sound effect of ball hit wall, hit panddle, destory bricks and ball been break
-
-
 ## Hearts Lives System and Game Over Logic Implementation ❤️ - **Iverson (Shuchen) Yuan**
 
 ## Feature Overview 🎮
@@ -55,3 +39,18 @@ In this Breakout game, I implemented a complete lives system and game over logic
 - ⚠️ When player lives reach zero, the game pauses and displays a game over screen
 - 🔄 Game over panel provides restart and quit game options
 - 🖱️ Mouse cursor is unlocked so players can interact with UI elements
+
+
+## Scoring System (Ming Xu)
+- This project realizes a separate scoring system for each level. The player can more intuitively understand their game progress. The animation effect of the score display panel and the corresponding colour matching keep the style of the page unified and harmonious.
+
+
+## Brick Collision Effects (Lucas Xu)
+
+### When the ball touches the brick:
+- **Camera Shake**: The camera vibrates upon impact.
+- **Sound Effect**: A sound plays to enhance feedback.
+
+## Particle System & Enhanced Audio System (Jinxi Hu)
+- Use the particle system of unity to implement the effect of destory the brick and ball
+- User unity audio system to implement the sound effect of ball hit wall, hit panddle, destory bricks and ball been break
