@@ -9,6 +9,7 @@ This project realizes some new features on the basis of a simple repeat of the c
 
 ### **Updated Features**
 
+## Scoring System (Ming Xu)
 - This project realizes a separate scoring system for each level. The player can more intuitively understand their game progress. The animation effect of the score display panel and the corresponding colour matching keep the style of the page unified and harmonious.
 
 
@@ -16,10 +17,9 @@ This project realizes some new features on the basis of a simple repeat of the c
 ## Brick Collision Effects (Lucas Xu)
 
 ### When the ball touches the brick:
-- 🎥 **Camera Shake**: The camera vibrates upon impact.
-- 🔊 **Sound Effect**: A sound plays to enhance feedback.
+- **Camera Shake**: The camera vibrates upon impact.
+- **Sound Effect**: A sound plays to enhance feedback.
 
-### **Demo Video**
 
 # Hearts Lives System and Game Over Logic Implementation ❤️
 
