@@ -4,11 +4,10 @@
 This project extends the classic arcade game **Breakout** with enhanced features and modern gameplay elements. Building upon the timeless brick-breaking mechanics, we've implemented additional functionality including:
 
 - ❤️ **Life system visualization** with animated hearts
-- 🖥️ **Engaging UI elements** for game over and winning states
+- 🖥️ **Engaging UI elements** for game over
 - 📱 **Responsive controls** for smooth gameplay
 - 📊 **Score tracking** system
 - 📷 **Camera effects** for impact feedback
-- 🎛️ **Game state management** with scene transitions
 
 ## Project Tools 🛠️
 This project is built using **Unity engine** and developed with **Visual Studio Code**. Version control is managed through **GitHub**, enabling efficient collaboration and feature tracking throughout the development process.
