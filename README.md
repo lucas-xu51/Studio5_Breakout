@@ -34,8 +34,7 @@ In this Breakout game, I implemented a complete lives system and game over logic
 1. 📊 Visual heart icons to represent lives
 2. ✨ Animation effects when lives decrease
 3. 🛑 Game over logic (pausing the game and displaying game over screen when lives reach zero)
-4. 🔄 Scene transition logic (advancing to next level or showing victory screen)
-5. 🎲 Game restart, return to main menu, and quit game functionality
+4. 🎲 Game restart, return to main menu, and quit game functionality
 
 ## Implementation Approach 🛠️
 
