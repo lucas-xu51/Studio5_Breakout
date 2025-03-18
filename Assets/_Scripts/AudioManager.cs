@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     //make static instance to maek reference easyer
     public static AudioManager instance;
 
-    [SerializeField] private AudioSource bumpSource;
+    [SerializeField] private AudioSource bumpSource, pinSource;
 
     public void Awake()
     {
@@ -26,6 +26,17 @@ public class AudioManager : MonoBehaviour
         if (bumpSource != null)
         {
             bumpSource.Play();  // 使用 PlayOneShot 来播放音效
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource 组件或音效未设置！");
+        }
+    }
+    public void playPin()
+    {
+        if (pinSource != null)
+        {
+            pinSource.Play();  // 使用 PlayOneShot 来播放音效
         }
         else
         {

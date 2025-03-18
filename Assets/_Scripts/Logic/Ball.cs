@@ -49,9 +49,9 @@ public class Ball : MonoBehaviour
             //AudioManager.instance.playBump();
         }
         //add code to detacted hit the walls and play sound
-        if (other.gameObject.CompareTag("Environment"))
+        if (other.gameObject.CompareTag("Environment")||other.gameObject.CompareTag("Paddle"))
         {
-            AudioManager.instance.playBump();
+            AudioManager.instance.playPin();
         }
     }
 
@@ -85,6 +85,9 @@ public class Ball : MonoBehaviour
         rb.AddForce(transform.forward * ballLaunchSpeed, ForceMode.Impulse);
         rb.interpolation = RigidbodyInterpolation.Interpolate;
         isBallActive = true;
+        //audio when fire ball
+        AudioManager.instance.playPin();
+
         //show tail
         //emissionModule.enabled = true;
     }
