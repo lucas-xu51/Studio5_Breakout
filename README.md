@@ -9,6 +9,11 @@ This project extends the classic arcade game **Breakout** with enhanced features
 - 📊 **Score tracking** system
 - 📷 **Camera effects** for impact feedback
 
+## 📸 Game Demo
+
+[![Unity Roll-a-Ball and Bowling Game Demo](https://img.youtube.com/vi/LmRjTkSof-w/0.jpg)](https://www.youtube.com/watch?v=LmRjTkSof-w)
+_Screenshot of the game in action_
+
 ## Project Tools 🛠️
 This project is built using **Unity engine** and developed with **Visual Studio Code**. Version control is managed through **GitHub**, enabling efficient collaboration and feature tracking throughout the development process.
 
