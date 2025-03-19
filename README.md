@@ -11,7 +11,7 @@ This project extends the classic arcade game **Breakout** with enhanced features
 
 ## 📸 Game Demo
 
-[![Unity Roll-a-Ball and Bowling Game Demo](https://img.youtube.com/vi/LmRjTkSof-w/0.jpg)](https://www.youtube.com/watch?v=LmRjTkSof-w)
+[![Unity Roll-a-Ball and Bowling Game Demo](https://img.youtube.com/vi/LmRjTkSof-w/0.jpg)](https://www.youtube.com/watch?v=LmRjTkSof-w)<br>
 _Screenshot of the game in action_
 
 ## Project Tools 🛠️
